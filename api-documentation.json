@@ -1,0 +1,507 @@
+{
+	"info": {
+		"_postman_id": "47134796-356a-4e89-a1de-598839069172",
+		"name": "Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25835711"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/register?name=test name&phone=01019135058&password=455fdasA$",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"register"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "test name"
+								},
+								{
+									"key": "phone",
+									"value": "01019135058"
+								},
+								{
+									"key": "password",
+									"value": "455fdasA$"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "2|KuDQ0PkfvipRobJ9pexlGDaCcvWptlrJlxUta4lU33da7c8d"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8000/api/v1/logout"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/login?phone=01019135058&password=455fdasA$",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							],
+							"query": [
+								{
+									"key": "phone",
+									"value": "01019135058"
+								},
+								{
+									"key": "password",
+									"value": "455fdasA$"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verification",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/verify?phone=01019135058&verification_code=377444",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"verify"
+							],
+							"query": [
+								{
+									"key": "phone",
+									"value": "01019135058"
+								},
+								{
+									"key": "verification_code",
+									"value": "377444"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tags",
+			"item": [
+				{
+					"name": "All Tags",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "2|KuDQ0PkfvipRobJ9pexlGDaCcvWptlrJlxUta4lU33da7c8d"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8000/api/v1/tags"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a tag",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "2|KuDQ0PkfvipRobJ9pexlGDaCcvWptlrJlxUta4lU33da7c8d"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/tags?name=test10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"tags"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "test10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a tag",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "2|KuDQ0PkfvipRobJ9pexlGDaCcvWptlrJlxUta4lU33da7c8d"
+							}
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/tags/1?name=test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"tags",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a tag",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "2|KuDQ0PkfvipRobJ9pexlGDaCcvWptlrJlxUta4lU33da7c8d"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8000/api/v1/tags/10"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "All Posts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "3|maiUtq66K1fkiqHLtnHEIJU5dfPFgENEE5sw8PnSd46f4742"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8000/api/v1/posts"
+					},
+					"response": []
+				},
+				{
+					"name": "Deleted Posts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "3|maiUtq66K1fkiqHLtnHEIJU5dfPFgENEE5sw8PnSd46f4742"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8000/api/v1/posts/deleted"
+					},
+					"response": []
+				},
+				{
+					"name": "Show a post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "3|maiUtq66K1fkiqHLtnHEIJU5dfPFgENEE5sw8PnSd46f4742"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8000/api/v1/posts/10"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "3|maiUtq66K1fkiqHLtnHEIJU5dfPFgENEE5sw8PnSd46f4742"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "this is the title of post 1",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "this is the body of post 1",
+									"type": "text"
+								},
+								{
+									"key": "is_pinned",
+									"value": "on",
+									"type": "text"
+								},
+								{
+									"key": "tags[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "tags[]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "cover_image",
+									"type": "file",
+									"src": "postman-cloud:///1eed970f-58c4-4800-a5c8-49973a923422"
+								},
+								{
+									"key": "tags[]",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8000/api/v1/posts"
+					},
+					"response": []
+				},
+				{
+					"name": "Restore a post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "3|maiUtq66K1fkiqHLtnHEIJU5dfPFgENEE5sw8PnSd46f4742"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "http://localhost:8000/api/v1/posts/10/restore"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "3|maiUtq66K1fkiqHLtnHEIJU5dfPFgENEE5sw8PnSd46f4742"
+							}
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/posts/10?is_pinned=off",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"posts",
+								"10"
+							],
+							"query": [
+								{
+									"key": "is_pinned",
+									"value": "off"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "3|maiUtq66K1fkiqHLtnHEIJU5dfPFgENEE5sw8PnSd46f4742"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8000/api/v1/posts/10"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Statistics",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:8000/api/v1/stats"
+			},
+			"response": []
+		}
+	]
+}

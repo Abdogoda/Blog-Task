@@ -249,7 +249,7 @@ public function getStats() {
 
 2. Navigate to the project directory.
    ```bash
-   cd user_post_management_api
+   cd blog_task
    ```
 
 3. Install the dependencies.
@@ -268,12 +268,8 @@ public function getStats() {
    php artisan migrate
    ```
 
-6. Seed the database (optional).
-   ```bash
-   php artisan db:seed
-   ```
 
-7. Start the development server.
+6. Start the development server.
    ```bash
    php artisan serve
    ```
